@@ -1,8 +1,6 @@
-#DX90 firmware modified by Lurker
+#iBasso DX90 firmware modified by Lurker
 
-Modified firmware binaries for iBasso DX90 DAP
-
-**DISCLAIMER:** No changes were made to change the basic player functionality and behaviour! Expect the same bugs and misbehaviour found in the base stock firmware!
+**DISCLAIMER:** No changes were made to change the basic player functionality and behaviour! Expect the same bugs and misbehaviour found in the base stock firmware! **No warranty at all: use the modified firmware at your own risk and responsibility!**
 
 **NOTE:** to tell which version is running, go to _Settings_->_Advanced_->_System Info_ and check the _Model number_. The modification version number (L0, L1 etc) is right after the actual model number (DX90).
 
