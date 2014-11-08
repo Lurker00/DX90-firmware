@@ -1,3 +1,5 @@
+#iBasso DX90 firmware modified by Lurker
+
 **DISCLAIMER:** No changes were made to the basic player functionality and behavior! Expect the same bugs and misbehavior found in the base stock firmware! **No warranty at all: use the modified firmware at your own risk and responsibility!**
 
 **NOTE:** starting with v2.1.5, to tell which version is running, go to _Settings_->_Advanced_->_System Info_ and check the _Model number_. The modification version number (L0, L1 etc) is right after the actual model number (DX90).
@@ -5,10 +7,10 @@
 - `DX90FirmwareV2.1.5-L0.7z` - unused services are disabled.
 - `DX90FirmwareV2.1.5-L1.7z` - unused services are disabled, fonts replaced with Roboto Condensed and Arial Unicode MS.
 
-#Introduction for those who seeks the sound quality
-All firmware versions for iBasso DX90, stock or with my modifications, are bit perfect. It means, with EQ turned off, the *sound data is not affected by the software, and is transferred to the DAC exactly as it is*. Any difference in sound signatures between versions are resulted from different conditions under which the hardware is running.
-
 #Detailed description of the changes
+
+##Introduction for those who seeks the sound quality
+All firmware versions for iBasso DX90, stock or with my modifications, are bit perfect. It means, with EQ turned off, the *sound data is not affected by the software, and is transferred to the DAC exactly as it is*. Any difference in sound signatures between versions are resulted from different conditions under which the hardware is running.
 
 ##1. Fonts replaced.
 
