@@ -4,10 +4,10 @@
 
 **NOTE:** starting with v2.1.5, to tell which version is running, go to _Settings_->_Advanced_->_System Info_ and check the _Model number_. The modification version number (L0, L1 etc) is right after the actual model number (DX90).
 
-Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller arhives compared to ZIP.
-
 - `DX90FirmwareV2.1.5-L0.7z` - unused services are disabled.
 - `DX90FirmwareV2.1.5-L1.7z` - unused services are disabled, fonts replaced with Roboto Condensed and Arial Unicode MS.
+
+Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
 #Detailed description of the changes
 
