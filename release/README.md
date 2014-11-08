@@ -6,7 +6,7 @@
 
 - `DX90FirmwareV2.1.5-L1.7z` - unused services are disabled, fonts replaced with Roboto Condensed and Arial Unicode MS.
 - `DX90FirmwareV2.1.5-L0.7z` - unused services are disabled.
-- `DX90FirmwareV2.1.0-Roboto-NoServices-Fast-Intl.7z` - v2.1.0, unused services are disabled, fonts replaced, CPU at performance mode.
+- `DX90FirmwareV2.1.0-Roboto-NoServices-Fast-Intl.7z` - unused services are disabled, fonts replaced, CPU at performance mode.
 
 Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
