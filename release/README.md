@@ -9,6 +9,15 @@
 
 Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
+##Instruction for firmware update:
+1. Extract the archive file, and copy the `update.img` into the DX90.
+2. Once copied, safely disconnect the DX90 from the computer.
+3. Select _Settings_->_Advanced_->_System Update_ (the system update option appears only after the update.img is inside the DX90).
+4. Click "OK" to start the firmware update.
+5. The DX90 will reboot after firmware update completed. 
+6. Select _Settings_->_Advanced_->_Factory Reset_ to reset the DX90. This is to avoid conflicts with residual settings from the previous firmware.
+7. Delete the `update.img` from DX90.
+
 #Detailed description of the changes
 
 ##Introduction for those who seeks the sound quality
@@ -25,7 +34,7 @@ The two fonts used by iBasso are replaced with one, which is `Roboto Condensed`,
 ##2. Unused services disabled.
 
 The full list is:
-* `netd (internet servers and services).
+* `netd` (internet servers and services).
 * `debuggerd` (gdb debugger interface, also creates crash logs of native applications).
 * `rild` (controls wireless hardware).
 * `rild3` (controls wireless hardware).
