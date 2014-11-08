@@ -4,5 +4,7 @@
 
 **NOTE:** to tell which version is running, go to _Settings_->_Advanced_->_System Info_ and check the _Model number_. The modification version number (L0, L1 etc) is right after the actual model number (DX90).
 
-- `DX90FirmwareV2.1.5-L0.zip` - unused services are disabled.
-- `DX90FirmwareV2.1.5-L1.zip` - unused services are disabled, fonts replaced with Roboto Condensed and Arial Unicode MS.
+To download the latest releases, please to to the [Releases section](https://github.com/Lurker00/DX90-firmware/releases).
+
+The previous versions are archived in the [releases folder](https://github.com/Lurker00/DX90-firmware/tree/master/release).
+
