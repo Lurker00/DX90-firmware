@@ -4,7 +4,7 @@
 
 **NOTE:** starting with v2.1.5, to tell which version is running, go to _Settings_->_Advanced_->_System Info_ and check the _Model number_. The modification version number (L0, L1 etc) is right after the actual model number (DX90).
 
-- [`DX90FirmwareV2.1.5-L2.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L2.7z) - Based on L1. Unregistered video codecs (4), image size reduced (5), gapless buffer size increased (6).
+- [`DX90FirmwareV2.1.5-L2.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L2.7z) - Based on L1. Unregistered video codecs (4), image size reduced (5), gapless buffer size increased (6), adb in _ USB Charge Only_ mode.
 - [`DX90FirmwareV2.1.5-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L1.7z) - fonts replaced (1), unused services disabled (2).
 - [`DX90FirmwareV2.1.5-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L0.7z) - unused services disabled (2).
 - [`DX90FirmwareV2.1.0-Roboto-NoServices-Fast-Intl.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.0-Roboto-NoServices-Fast-Intl.7z) - fonts replaced (1), unused services disabled (2), CPU at performance mode (3), unregistered video codecs (4).
@@ -75,3 +75,9 @@ Stock firmware 2.1.5 image contains two redundant copies of the OS kernel. I bel
 ##6. Gapless buffer
 
 The default buffer for gapless playback is 100 ms, meaning, the sound can be interrupted, if 100 ms is not enough to prepare the next file for playback. Increasing the buffer to 200 ms decreases the chance of such interrupts.
+
+##7. ADB runs in USB Charge Only mode
+
+ADB is Android Debug Bridge. Though it is intended for debugging Android applications, some power users find it useful as well. It does not harm, nor it affects the sound. The only side effect for regular users is a "new device found" message on connecting DX90 to Windows in _Charge Only_ mode. You may ignore it, and ignore unrecognized device, or install "Android ADB Interface" drivers.
+
+I never saw complains from Rockbox for DX90 (which has ADB turned on) users, and ADB is useful for myself to check the results of modifications, so I decided to keep it in the public release.
