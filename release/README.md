@@ -64,7 +64,7 @@ Obviously, the firmware with this change is influenced by warming-up effect: fro
 
 ##4. Unregistered video codecs
 
-This tweak was implemented in 2.1.0, but not documented.
+This tweak was implemented in modifications to 2.1.0, but not documented.
 
 The codec set used by Mango player includes video playback related stuff. The tweak is to remove video codecs from declarations. If you hear the difference between 2.1.5-L1 and 2.1.5-L2, most probably this difference is caused by this tweak.
 
