@@ -5,9 +5,9 @@
 **NOTE:** starting with v2.1.5, to tell which version is running, go to _Settings_->_Advanced_->_System Info_ and check the _Model number_. The modification version number (L0, L1 etc) is right after the actual model number (DX90).
 
 - [`DX90FirmwareV2.1.5-L2.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L2.7z) - Based on L1. Unregistered video codecs (4), image size reduced (5), gapless buffer size increased (6), adb in _USB Charge Only_ mode (7).
-- [`DX90FirmwareV2.1.5-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L1.7z) - fonts replaced ([1](#1. Fonts replaced)), unused services disabled (2).
+- [`DX90FirmwareV2.1.5-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L1.7z) - fonts replaced ([1](#1.-Fonts-replaced)), unused services disabled (2).
 - [`DX90FirmwareV2.1.5-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L0.7z) - unused services disabled (2).
-- [`DX90FirmwareV2.1.0-Roboto-NoServices-Fast-Intl.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.0-Roboto-NoServices-Fast-Intl.7z) - fonts replaced ([1](#1. Fonts replaced)), unused services disabled (2), CPU at performance mode (3), unregistered video codecs (4).
+- [`DX90FirmwareV2.1.0-Roboto-NoServices-Fast-Intl.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.0-Roboto-NoServices-Fast-Intl.7z) - fonts replaced ([1](#1.-Fonts-replaced)), unused services disabled (2), CPU at performance mode (3), unregistered video codecs (4).
 
 Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
