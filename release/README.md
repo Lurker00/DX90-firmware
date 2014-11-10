@@ -74,4 +74,4 @@ Stock firmware 2.1.5 image contains two redundant copies of the OS kernel. I bel
 
 ##6. Gapless buffer
 
-The default buffer for gapless playback is 100 ms, meaning, the sound can be interrupted, if 100 ms is not enough to prepare the next file for playback. Increasing it to 200 ms decreases the chance of such interrupts.
+The default buffer for gapless playback is 100 ms, meaning, the sound can be interrupted, if 100 ms is not enough to prepare the next file for playback. Increasing the buffer to 200 ms decreases the chance of such interrupts.
