@@ -4,9 +4,10 @@
 
 **NOTE:** starting with v2.1.5, to tell which version is running, go to _Settings_->_Advanced_->_System Info_ and check the _Model number_. The modification version number (L0, L1 etc) is right after the actual model number (DX90).
 
-- [`DX90FirmwareV2.1.5-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L1.7z) - unused services disabled, fonts replaced.
-- [`DX90FirmwareV2.1.5-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L0.7z) - unused services disabled.
-- [`DX90FirmwareV2.1.0-Roboto-NoServices-Fast-Intl.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.0-Roboto-NoServices-Fast-Intl.7z) - unused services disabled, fonts replaced, CPU at performance mode.
+- [`DX90FirmwareV2.1.5-L2.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L2.7z) - Based on L1, unregistered video codecs (4), image size reduced (5), gapless buffer size increased (6).
+- [`DX90FirmwareV2.1.5-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L1.7z) - fonts replaced (1), unused services disabled (2).
+- [`DX90FirmwareV2.1.5-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L0.7z) - unused services disabled (2).
+- [`DX90FirmwareV2.1.0-Roboto-NoServices-Fast-Intl.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.0-Roboto-NoServices-Fast-Intl.7z) - fonts replaced (1), unused services disabled (2), CPU at performance mode (3), unregistered video codecs (4).
 
 Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
@@ -60,3 +61,17 @@ The OS kernel supports the following CPU performance governors:
 The CPU in DX90 supports only two frequencies: 312 and 504MHz. It means, it only can be switched between these two frequencies. The power consumptions at these frequencies differ in around 2 times, and power dissipation at the high speed is notably more than at the low speed. But CPU in DX90 is not the main power consumer: display, flash, RAM, DAC and analog part (including headphone amplifier) in total consume much more. It means, the overall power consumption is not much increased when CPU is running in performance mode. Increased power consumption is more noticable for those who listen mostly MP3s, and much less for those who prefer high-resolution flacs and DSD.
 
 Obviously, the firmware with this change is influenced by warming-up effect: from the cold start, it takes some minutes to achieve the working stable conditions. Then, it works in the most clean sound playback conditions that can be reached now.
+
+##4. Unregistered video codecs.
+
+This tweak was implemented in 2.1.0, but not documented.
+
+The codec set used by Mango player includes video playback related stuff. The tweak is to remove video codecs from declarations. If you hear the difference between 2.1.5-L1 and 2.1.5-L2, most probably this difference is caused by this tweak.
+
+##5. Image size reduced
+
+Stock firmware 2.1.5 image contains two redundant copies of the OS kernel. I believe they just take the space and increase the image size, and that's why I believe it is safe to remove them.
+
+##6. Gapless buffer
+
+The default buffer for gapless playback is 100 ms, meaning, the sound can be interrupted, if 100 ms is not enough to prepare the next file for playback. Increasing it to 200 ms decreases the chance of such interrupts.
