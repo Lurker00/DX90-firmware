@@ -76,7 +76,7 @@ Stock firmware 2.1.5 image contains two redundant copies of the OS kernel. I bel
 
 The default buffer for gapless playback is 100 ms, meaning, the sound can be interrupted, if 100 ms is not enough to prepare the next file for playback. Increasing the buffer to 200 ms decreases the chance of such interrupts.
 
-##7. ADB runs in USB Charge Only mode
+##7. ADB runs in _USB Charge Only_ mode
 
 ADB is Android Debug Bridge. Though it is intended for debugging Android applications, some power users find it useful as well. It does not harm, nor it affects the sound. The only side effect for regular users is a "new device found" message on connecting DX90 to Windows in _Charge Only_ mode. You may ignore it, and ignore unrecognized device, or install "Android ADB Interface" drivers.
 
