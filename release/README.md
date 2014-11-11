@@ -33,7 +33,7 @@ Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/
 ##Introduction for those who seeks the sound quality
 All firmware versions for iBasso DX90, stock or with my modifications, are bit perfect. It means, with EQ turned off, the *sound data is not affected by the software, and is transferred to the DAC exactly as it is*. Any difference in sound signatures between versions are resulted from different conditions under which the hardware is running.
 
-In DAPs, with limited space and power from a battery, the sound signature depends on many factors, including CPU load. So, any changes in the firmware code, even unrelated directly to the sound path, may affect the sound signature.
+In DAPs, with limited space and one battery as the power source for both digital and analog circuits, the sound signature also depends on CPU load. So, any changes in the firmware code, even unrelated directly to the sound path, may affect the sound signature.
 
 ##1. Fonts replaced
 
