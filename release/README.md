@@ -57,9 +57,9 @@ The full list is:
 
 It is obvious that none of them have any use in DX90. Note for the last two items: DX90 has removed Dalvik JVM, so there is no a way to install and run Android apps!
 
-##3. CPU is always working at the highest performance
+**Note:** iBasso has incorporated most of this modification into stock firmware starting version 2.1.8. The only service they have left (and I removed) is `mediaserver`. But they have removed even more!
 
-**Note:** iBasso has incorporated this modification into stock firmware version 2.1.5.
+##3. CPU is always working at the highest performance
 
 Changes in the CPU working frequency during audio playback affects the stability of the power source and temperature, probably, also the stability of the sound stream from CPU to DAC. So, stable CPU speed also means stable power and temperature of other components: DAC, clock generator, op-amps. Stability of the environment parameters of the DAC and clock generator also leads to lower jitter.
 
@@ -73,6 +73,8 @@ The CPU in DX90 supports only two frequencies: 312 and 504MHz. It means, it only
 
 Obviously, the firmware with this change is influenced by warming-up effect: from the cold start, it takes some minutes to achieve the working stable conditions. Then, it works in the most clean sound playback conditions that can be reached now.
 
+**Note:** iBasso has incorporated this modification into stock firmware starting from version 2.1.5.
+
 ##4. Unregistered video codecs
 
 This tweak was implemented in modifications to 2.1.0, but not documented.
@@ -83,9 +85,13 @@ The codec set used by Mango player includes video playback related stuff. The tw
 
 Stock firmware 2.1.5 image contains two redundant copies of the OS kernel. I believe they just take the space and increase the image size, and that's why I believe it is safe to remove them.
 
+Stock firmware 2.1.8 image contains two redundant copies of the OS kernel as well, but I've removed only one of them.
+
 ##6. Gapless buffer
 
 The default buffer for gapless playback is 100 ms, meaning, the sound can be interrupted, if 100 ms is not enough to prepare the next file for playback. Increasing the buffer to 200 ms decreases the chance of such interrupts.
+
+**Note:** iBasso has incorporated this modification into stock firmware starting from version 2.1.8, increasing the buffer to 1000 ms.
 
 ##7. ADB runs in _USB Charge Only_ mode
 
