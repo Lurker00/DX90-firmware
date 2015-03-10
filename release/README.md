@@ -57,7 +57,7 @@ The full list is:
 
 It is obvious that none of them have any use in DX90. Note for the last two items: DX90 has removed Dalvik JVM, so there is no a way to install and run Android apps!
 
-**Note:** iBasso has incorporated most of this modification into stock firmware starting version 2.1.8. The only service they have left (and I removed) is `mediaserver`. But they have removed even more!
+**Note:** iBasso has incorporated most of this modification into stock firmware starting from version 2.1.8. The only service they have left (and I removed) is `mediaserver`. But they have removed even more!
 
 ##3. CPU is always working at the highest performance
 
