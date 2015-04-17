@@ -4,6 +4,7 @@
 
 **NOTE:** starting with v2.1.5, to tell which version is running, go to _Settings_->_Advanced_->_System Info_ and check the _Model number_. The modification version number (L0, L1 etc) is right after the actual model number (DX90).
 
+- [`DX90FirmwareV2.2.0-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.2.0-L0.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]). **Note:** In this build, iBasso already have done all the optimizations that I did before, and even more!
 - [`DX90FirmwareV2.1.8-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.8-L1.7z) - same as L0, but with default fonts.
 - [`DX90FirmwareV2.1.8-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.8-L0.7z) - fonts replaced ([1]), unused services disabled ([2]), unregistered video codecs ([4]), firmware image size reduced ([5]), adb in _USB Charge Only_ mode ([7]).
 - [`DX90FirmwareV2.1.5-L3.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L3.7z) - same as L2, but with default fonts.
@@ -59,7 +60,7 @@ The full list is:
 
 It is obvious that none of them have any use in DX90. Note for the last two items: DX90 has removed Dalvik JVM, so there is no a way to install and run Android apps!
 
-**Note:** iBasso has incorporated most of this modification into stock firmware starting from version 2.1.8. The only service they have left (and I removed) is `mediaserver`. But they have removed even more!
+**Note:** iBasso has incorporated this modification into stock firmware partially in version 2.1.8, and fully starting from version 2.2.0. Actually, they have removed even more!
 
 ##3. CPU is always working at the highest performance
 
@@ -83,11 +84,15 @@ This tweak was implemented in modifications to 2.1.0, but not documented.
 
 The codec set used by Mango player includes video playback related stuff. The tweak is to remove video codecs from declarations. If you hear the difference between 2.1.5-L1 and 2.1.5-L2, most probably this difference is caused by this tweak.
 
+**Note:** iBasso has incorporated this modification into stock firmware starting from version 2.2.0.
+
 ##5. Image size reduced
 
 Stock firmware 2.1.5 image contains two redundant copies of the OS kernel. I believe they just take the space and increase the image size, and that's why I believe it is safe to remove them.
 
 Stock firmware 2.1.8 image contains two redundant copies of the OS kernel as well, but I've removed only one of them.
+
+**Note:** iBasso has incorporated this modification into stock firmware starting from version 2.2.0. Also, they have removed a lot of other files that are not used, so that 2.2.0 has the smallest image file size!
 
 ##6. Gapless buffer
 
