@@ -111,7 +111,7 @@ I never saw complains from Rockbox for DX90 (which has ADB turned on) users, and
 
 ##8. Custom built exFAT and NTFS drivers
 Recently I've finished [my port of exFAT and NTFS drivers for Android](https://github.com/Lurker00/Android-fs) and decided to use them in DX90 firmware. They are built from the latest original source code (DX90 uses old versions), and I've made some changes to exFAT driver which I found useful for DX90:
-* Original exFAT driver relies on proper unmount of the file system, which often can't be achived for a battery powered device. With an accident power loss the original driver may leave the file system in a damaged state.
+* Original exFAT driver relies on proper unmount of the file system, which often can't be achieved for a battery powered device. With an accident power loss, the original driver may leave the file system in a damaged state.
 * Original exFAT driver make unneeded writes to the SD card: every boot and unmount (marks the volume as "opened" and "closed"), and on every file access (by modifying last access time).
  
 My build of drivers never change last access time for both exFAT and NTFS, and exFAT driver "opens" the volume only on requrests that require writes. Also, the exFAT driver now keeps the volume "closed", and in consistent state, as much as possible, preventing file system corruption on device power loss or SD card hot unplug.
