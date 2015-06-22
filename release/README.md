@@ -4,6 +4,7 @@
 
 **NOTE:** starting with v2.1.5, to tell which version is running, go to _Settings_->_Advanced_->_System Info_ and check the _Model number_. The modification version number (L0, L1 etc) is right after the actual model number (DX90).
 
+- [`DX90FirmwareV2.3.0-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.3.0-L1.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built exFAT/NTFS drivers ([8]).
 - [`DX90FirmwareV2.3.0-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.3.0-L0.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]).
 - [`DX90FirmwareV2.2.0-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.2.0-L0.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]). **Note:** In this build, iBasso already have done all the optimizations that I did before, and even more!
 - [`DX90FirmwareV2.1.8-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.8-L1.7z) - same as L0, but with default fonts.
@@ -21,6 +22,7 @@
 [5]: #5-image-size-reduced
 [6]: #6-gapless-buffer
 [7]: #7-adb-runs-in-usb-charge-only-mode
+[8]: #8-custom-built-exfat-and-ntfs-drivers
 
 Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
@@ -106,3 +108,12 @@ The default buffer for gapless playback is 100 ms, meaning, the sound can be int
 ADB is Android Debug Bridge. Though it is intended for debugging Android applications, some power users find it useful as well. It does not harm, nor it affects the sound. The only side effect for regular users is a "new device found" message on connecting DX90 to Windows in _Charge Only_ mode. You may ignore it, and ignore unrecognized device, or install "Android ADB Interface" drivers.
 
 I never saw complains from Rockbox for DX90 (which has ADB turned on) users, and ADB is useful for myself to check the results of modifications, so I decided to keep it in the public release.
+
+##8. Custom built exFAT and NTFS drivers
+Recently I've finished [my port of exFAT and NTFS drivers for Android](https://github.com/Lurker00/Android-fs) and decided to use them in DX90 firmware. They are built from the latest original source code (DX90 uses old versions), and I've made some changes to exFAT driver which I found useful for DX90:
+* Original exFAT driver relies on proper unmount of the file system, which often can't be achived for a battery powered device. With an accident power loss the original driver may leave the file system in a damaged state.
+* Original exFAT driver make unneeded writes to the SD card: every boot and unmount (marks the volume as "opened" and "closed"), and on every file access (by modifying last access time).
+ 
+My build of drivers never change last access time for both exFAT and NTFS, and exFAT driver "opens" the volume only on requrests that require writes. Also, the exFAT driver now keeps the volume "closed", and in consistent state, as much as possible, preventing file system corruption on device power loss or SD card hot unplug.
+
+Avoiding unneeded writes may also reduce the famous "fade in/fade out" problem, which, by my opinion, is rooted into ["wear leveling"](https://en.wikipedia.org/wiki/Wear_leveling) activity of an SD card internal controller.
