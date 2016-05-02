@@ -127,7 +127,7 @@ Avoiding unneeded writes may also reduce the famous "fade in/fade out" problem, 
 
 ##9. Ultimate cleanup
 
-This finalizes the process started by "unused services disabled ([2])", and based on the [work done for DX80](https://github.com/Lurker00/DX80-firmware/blob/master/release/README.md). I mean it, because, starting from 2.4.0L1, `MangoPlayer` is the only running process, apart from the `kernel`, `init`, which are required, obviously, and `vold`, that serves media mounts!
+This finalizes the process started by "unused services disabled ([2])", and is based on the [work done for DX80](https://github.com/Lurker00/DX80-firmware/blob/master/release/README.md). I mean it, because, starting from 2.4.0L1, `MangoPlayer` is the only running process, apart from the `kernel`, `init`, which are required, obviously, and `vold`, that serves media mounts!
 
 The stock firmware image contains a lot of files that are not actually used. I've removed most of them.
 
