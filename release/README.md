@@ -4,6 +4,7 @@
 
 **NOTE:** starting with v2.1.5, to tell which version is running, go to _Settings_->_Advanced_->_System Info_ and check the _Model number_. The modification version number (L0, L1 etc) is right after the actual model number (DX90).
 
+- [**`DX90FirmwareV2.4.0-L2.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L2.7z) - same as L1, but with default fonts.
 - [**`DX90FirmwareV2.4.0-L1.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L1.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built NTFS drivers ([8]), ultimate cleanup ([9]).
 - [`DX90FirmwareV2.4.0-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L0.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built exFAT/NTFS drivers ([8]).
 - [`DX90FirmwareV2.3.0-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.3.0-L1.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built exFAT/NTFS drivers ([8]).
@@ -122,7 +123,7 @@ My build of drivers never change last access time for both exFAT and NTFS, and e
 
 Avoiding unneeded writes may also reduce the famous "fade in/fade out" problem, which, by my opinion, is rooted into ["wear leveling"](https://en.wikipedia.org/wiki/Wear_leveling) activity of an SD card internal controller.
 
-**Note:** I've found that in 2.4.0 iBasso started to use kernel mode exFAT drivers. I've removed ,ine from 2.4.0L1 and L2.
+**Note:** I've found that in 2.4.0 iBasso started to use kernel mode exFAT drivers. I've removed mine from 2.4.0L1 and L2.
 
 ##9. Ultimate cleanup
 
