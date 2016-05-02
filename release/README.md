@@ -4,6 +4,7 @@
 
 **NOTE:** starting with v2.1.5, to tell which version is running, go to _Settings_->_Advanced_->_System Info_ and check the _Model number_. The modification version number (L0, L1 etc) is right after the actual model number (DX90).
 
+- [**`DX90FirmwareV2.4.0-L1.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L1.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built NTFS drivers ([8]), ultimate cleanup ([9]).
 - [`DX90FirmwareV2.4.0-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L0.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built exFAT/NTFS drivers ([8]).
 - [`DX90FirmwareV2.3.0-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.3.0-L1.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built exFAT/NTFS drivers ([8]).
 - [`DX90FirmwareV2.3.0-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.3.0-L0.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]).
@@ -25,6 +26,7 @@
 [6]: #6-gapless-buffer
 [7]: #7-adb-runs-in-usb-charge-only-mode
 [8]: #8-custom-built-exfat-and-ntfs-drivers
+[9]: #9-ultimate-cleanup
 
 Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
@@ -119,3 +121,16 @@ Recently I've finished [my port of exFAT and NTFS drivers for Android](https://g
 My build of drivers never change last access time for both exFAT and NTFS, and exFAT driver "opens" the volume only on requrests that require writes. Also, the exFAT driver now keeps the volume "closed", and in consistent state, as much as possible, preventing file system corruption on device power loss or SD card hot unplug.
 
 Avoiding unneeded writes may also reduce the famous "fade in/fade out" problem, which, by my opinion, is rooted into ["wear leveling"](https://en.wikipedia.org/wiki/Wear_leveling) activity of an SD card internal controller.
+
+**Note:** I've found that in 2.4.0 iBasso started to use kernel mode exFAT drivers. I've removed ,ine from 2.4.0L1 and L2.
+
+##9. Ultimate cleanup
+
+This finalizes the process started by "unused services disabled ([2])", and based on the [work done for DX80](https://github.com/Lurker00/DX80-firmware/blob/master/release/README.md). I mean it, because, starting from 2.4.0L1, `MangoPlayer` is the only running process, apart from the `kernel`, `init`, which are required, obviously, and `vold`, that serves media mounts!
+
+The stock firmware image contains a lot of files that are not actually used. I've removed most of them.
+
+The MangoPlayer sound library uses a proprietary implementation of [OpenMAX](https://en.wikipedia.org/wiki/OpenMAX) engine, that supports sound playback via [OpenSL ES](https://en.wikipedia.org/wiki/OpenSL_ES) interface, which is not used in DX90. I've written a [small stub to replace the system library](https://github.com/Lurker00/DX80-firmware/blob/master/src/jni), which allowed me to remove even more files. After this, MangoPlayer also requires less RAM to work, because OpenGL ES related stuff is not loaded with the player.
+
+System logging is turned off. In particular, it is achived by a [`liblog.so` stub that does nothing](https://github.com/Lurker00/DX80-firmware/blob/master/src/jni).
+
