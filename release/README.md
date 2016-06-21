@@ -4,8 +4,10 @@
 
 **NOTE:** starting with v2.1.5, to tell which version is running, go to _Settings_->_Advanced_->_System Info_ and check the _Model number_. The modification version number (L0, L1 etc) is right after the actual model number (DX90).
 
-- [**`DX90FirmwareV2.4.0-L2.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L2.7z) - same as L1, but with default fonts.
-- [**`DX90FirmwareV2.4.0-L1.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L1.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built NTFS drivers ([8]), ultimate cleanup ([9]).
+- [**`DX90FirmwareV2.5.1-L1.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.5.1-L1.7z) - same as L0, but with default fonts.
+- [**`DX90FirmwareV2.5.1-L0.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.5.1-L0.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built NTFS drivers ([8]), ultimate cleanup ([9]).
+- [`DX90FirmwareV2.4.0-L2.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L2.7z) - same as L1, but with default fonts.
+- [`DX90FirmwareV2.4.0-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L1.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built NTFS drivers ([8]), ultimate cleanup ([9]).
 - [`DX90FirmwareV2.4.0-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L0.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built exFAT/NTFS drivers ([8]).
 - [`DX90FirmwareV2.3.0-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.3.0-L1.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built exFAT/NTFS drivers ([8]).
 - [`DX90FirmwareV2.3.0-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.3.0-L0.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]).
