@@ -4,23 +4,26 @@
 
 **NOTE:** starting with v2.1.5, to tell which version is running, go to _Settings_->_Advanced_->_System Info_ and check the _Model number_. The modification version number (L0, L1 etc) is right after the actual model number (DX90).
 
-- [**`DX90FirmwareV2.5.1-L1.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.5.1-L1.7z) - same as L0, but with default fonts.
-- [**`DX90FirmwareV2.5.1-L0.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.5.1-L0.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built NTFS drivers ([8]), ultimate cleanup ([9]).
-- [`DX90FirmwareV2.4.0-L2.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L2.7z) - same as L1, but with default fonts.
-- [`DX90FirmwareV2.4.0-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L1.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built NTFS drivers ([8]), ultimate cleanup ([9]).
-- [`DX90FirmwareV2.4.0-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L0.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built exFAT/NTFS drivers ([8]).
-- [`DX90FirmwareV2.3.0-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.3.0-L1.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built exFAT/NTFS drivers ([8]).
-- [`DX90FirmwareV2.3.0-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.3.0-L0.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]).
-- [`DX90FirmwareV2.2.0-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.2.0-L1.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built exFAT/NTFS drivers ([8]).
-- [`DX90FirmwareV2.2.0-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.2.0-L0.7z) - fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]). **Note:** In this build, iBasso already have done all the optimizations that I did before, and even more!
-- [`DX90FirmwareV2.1.8-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.8-L1.7z) - same as L0, but with default fonts.
-- [`DX90FirmwareV2.1.8-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.8-L0.7z) - fonts replaced ([1]), unused services disabled ([2]), unregistered video codecs ([4]), firmware image size reduced ([5]), adb in _USB Charge Only_ mode ([7]).
-- [**`DX90FirmwareV2.1.5-L5.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L5.7z) - same as L4, but with default fonts.
-- [**`DX90FirmwareV2.1.5-L4.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L4.7z) - based on L2, with custom built NTFS drivers ([8]) and ultimate cleanup ([9]).
-- [`DX90FirmwareV2.1.5-L3.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L3.7z) - same as L2, but with default fonts.
-- [`DX90FirmwareV2.1.5-L2.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L2.7z) - based on L1. Unregistered video codecs ([4]), firmware image size reduced ([5]), gapless buffer size increased ([6]), adb in _USB Charge Only_ mode ([7]).
-- [`DX90FirmwareV2.1.5-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L1.7z) - fonts replaced ([1]), unused services disabled ([2]).
-- [`DX90FirmwareV2.1.5-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L0.7z) - unused services disabled ([2]).
+| File | Description |
+| --- | --- |
+| [**`DX90FirmwareV2.5.1-L1.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.5.1-L1.7z) | **same as L0, but with default fonts.** |
+| [**`DX90FirmwareV2.5.1-L0.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.5.1-L0.7z) | **fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built NTFS drivers ([8]), ultimate cleanup ([9]).** |
+| [`DX90FirmwareV2.4.0-L2.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L2.7z) | same as L1, but with default fonts. |
+| [`DX90FirmwareV2.4.0-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L1.7z) | fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built NTFS drivers ([8]), ultimate cleanup ([9]). |
+| [`DX90FirmwareV2.4.0-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L0.7z) | fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built exFAT/NTFS drivers ([8]). |
+| [`DX90FirmwareV2.3.0-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.3.0-L1.7z) | fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built exFAT/NTFS drivers ([8]). |
+| [`DX90FirmwareV2.3.0-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.3.0-L0.7z) | fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]). |
+| [`DX90FirmwareV2.2.0-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.2.0-L1.7z) | fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built exFAT/NTFS drivers ([8]). |
+| [`DX90FirmwareV2.2.0-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.2.0-L0.7z) | fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]). **Note:** In this build, iBasso already have done all the optimizations that I did before, and even more! |
+| [`DX90FirmwareV2.1.8-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.8-L1.7z) | same as L0, but with default fonts. |
+| [`DX90FirmwareV2.1.8-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.8-L0.7z) | fonts replaced ([1]), unused services disabled ([2]), unregistered video codecs ([4]), firmware image size reduced ([5]), adb in _USB Charge Only_ mode ([7]). |
+| [**`DX90FirmwareV2.1.5-L5.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L5.7z) | **same as L4, but with default fonts.** |
+| [**`DX90FirmwareV2.1.5-L4.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L4.7z) | **fonts replaced ([1]), gapless buffer size increased ([6]), adb in _USB Charge Only_ mode ([7]), custom built NTFS drivers ([8]), ultimate cleanup ([9]).** |
+| [`DX90FirmwareV2.1.5-L3.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L3.7z) | same as L2, but with default fonts. |
+| [`DX90FirmwareV2.1.5-L2.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L2.7z) | based on L1. Unregistered video codecs ([4]), firmware image size reduced ([5]), gapless buffer size increased ([6]), adb in _USB Charge Only_ mode ([7]). |
+| [`DX90FirmwareV2.1.5-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L1.7z) | fonts replaced ([1]), unused services disabled ([2]) |
+| [`DX90FirmwareV2.1.5-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.5-L0.7z) | unused services disabled ([2]). |
+
 - [`DX90FirmwareV2.1.0-Roboto-NoServices-Fast-Intl.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.1.0-Roboto-NoServices-Fast-Intl.7z) - fonts replaced ([1]), unused services disabled ([2]), CPU at performance mode ([3]), unregistered video codecs ([4]).
 
 [1]: #1-fonts-replaced
