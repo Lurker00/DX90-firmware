@@ -149,4 +149,4 @@ System logging is turned off. In particular, it is achived by a [`liblog.so` stu
 
 DX50 and DX90 have common player source code, but iBasso usually release DX50 firmware after DX90, which may lead to some differences.
 
-DX50 firmware 1.9.5 has some useful changes regarding SACD ISO playback, compared to DX90 2.1.5, for both functionality and stability.
+DX50 firmware 1.9.5 has some useful changes regarding SACD ISO playback, compared to DX90 2.5.1, for both functionality and stability.
