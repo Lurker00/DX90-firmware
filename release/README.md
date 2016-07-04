@@ -6,8 +6,10 @@
 
 | File | Description |
 | --- | --- |
-| [**`DX90FirmwareV2.5.1-L1.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.5.1-L1.7z) | **same as L0, but with default fonts.** |
-| [**`DX90FirmwareV2.5.1-L0.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.5.1-L0.7z) | **fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built NTFS drivers ([8]), ultimate cleanup ([9]).** |
+| [**`DX90FirmwareV2.5.1-L3.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.5.1-L3.7z) | **same as L2, but with default fonts.** |
+| [**`DX90FirmwareV2.5.1-L2.7z`**](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.5.1-L2.7z) | **fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built NTFS drivers ([8]), ultimate cleanup ([9]), MangoPlayer from DX50 firmware v1.9.5 ([10]).** |
+| [`DX90FirmwareV2.5.1-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.5.1-L1.7z) | same as L0, but with default fonts. |
+| [`DX90FirmwareV2.5.1-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.5.1-L0.7z) | fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built NTFS drivers ([8]), ultimate cleanup ([9]). |
 | [`DX90FirmwareV2.4.0-L2.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L2.7z) | same as L1, but with default fonts. |
 | [`DX90FirmwareV2.4.0-L1.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L1.7z) | fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built NTFS drivers ([8]), ultimate cleanup ([9]). |
 | [`DX90FirmwareV2.4.0-L0.7z`](https://github.com/Lurker00/DX90-firmware/raw/master/release/DX90FirmwareV2.4.0-L0.7z) | fonts replaced ([1]), adb in _USB Charge Only_ mode ([7]), custom built exFAT/NTFS drivers ([8]). |
@@ -35,6 +37,7 @@
 [7]: #7-adb-runs-in-usb-charge-only-mode
 [8]: #8-custom-built-exfat-and-ntfs-drivers
 [9]: #9-ultimate-cleanup
+[10]: #10-mangoplayer-from-dx50
 
 Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
@@ -142,3 +145,8 @@ The MangoPlayer sound library uses a proprietary implementation of [OpenMAX](htt
 
 System logging is turned off. In particular, it is achived by a [`liblog.so` stub that does nothing](https://github.com/Lurker00/DX80-firmware/blob/master/src/jni).
 
+##10. MangoPlayer from DX50
+
+DX50 and DX90 have common player source code, but iBasso usually release DX50 firmware after DX90, which may lead to some differences.
+
+In DX50 firmware 1.9.5 there are some useful changes regardign SACD ISO playback, compared to DX90 2.1.5.
