@@ -1,4 +1,4 @@
-#iBasso DX90 firmware modified by Lurker
+# iBasso DX90 firmware modified by Lurker
 
 **DISCLAIMER:** No changes were made to the basic player functionality and behavior! Expect the same bugs and misbehavior found in the base stock firmware! **No warranty at all: use the modified firmware at your own risk and responsibility!**
 
@@ -41,7 +41,7 @@
 
 Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/) for it produces significantly smaller archives compared to ZIP.
 
-##Instruction for firmware update:
+## Instruction for firmware update:
 1. Extract the archive file, and copy the `update.img` into the DX90.
 2. Once copied, safely disconnect the DX90 from the computer.
 3. Select _Settings_->_Advanced_->_System Update_ (the system update option appears only after the update.img is inside the DX90).
@@ -50,14 +50,14 @@ Firmware images (`update.img`) are compressed with [7-Zip](http://www.7-zip.org/
 6. Select _Settings_->_Advanced_->_Factory Reset_ to reset the DX90. This is to avoid conflicts with residual settings from the previous firmware.
 7. Delete the `update.img` from DX90.
 
-#Detailed description of the changes
+# Detailed description of the changes
 
-##Introduction for those who seeks the sound quality
+## Introduction for those who seeks the sound quality
 All firmware versions for iBasso DX90, stock or with my modifications, are bit perfect. It means, with EQ turned off, the *sound data is not affected by the software, and is transferred to the DAC exactly as it is*. Any difference in sound signatures between versions are resulted from different conditions under which the hardware is running.
 
 In DAPs, with limited space and one battery as the power source for both digital and analog circuits, the sound signature also depends on CPU load. So, any changes in the firmware code, even unrelated directly to the sound path, may affect the sound signature.
 
-##1. Fonts replaced
+## 1. Fonts replaced
 
 iBasso uses `Microsoft YaHei` for Latin-based and Chinese characters, and `Nimbus Sans Global Bold` for the rest (Cyrillic, Japanese, Korean, Thai etc). It also uses pre-calculated character width tables, which (confirmed by calculations!) do not correspond to any, or any combination, of those fonts. Regardless of the reason iBasso went this way, the resulting texts look awful for me, and it was the primary reason for the firmware modification.
 
@@ -65,7 +65,7 @@ The two fonts used by iBasso are replaced with one, which is `Roboto Condensed`,
 
 **Note:** still sometimes character spacing may look odd, but this is due to character widths are rounded to integer number of pixels, and because iBasso does not use kerning in text rendering.
 
-##2. Unused services disabled
+## 2. Unused services disabled
 
 The full list is:
 * `netd` (internet servers and services).
@@ -80,7 +80,7 @@ It is obvious that none of them have any use in DX90. Note for the last two item
 
 **Note:** iBasso has incorporated this modification into stock firmware partially in version 2.1.8, and fully starting from version 2.2.0. Actually, they have removed even more!
 
-##3. CPU is always working at the highest performance
+## 3. CPU is always working at the highest performance
 
 Changes in the CPU working frequency during audio playback affects the stability of the power source and temperature, probably, also the stability of the sound stream from CPU to DAC. So, stable CPU speed also means stable power and temperature of other components: DAC, clock generator, op-amps. Stability of the environment parameters of the DAC and clock generator also leads to lower jitter.
 
@@ -96,7 +96,7 @@ Obviously, the firmware with this change is influenced by warming-up effect: fro
 
 **Note:** iBasso has incorporated this modification into stock firmware starting from version 2.1.5.
 
-##4. Unregistered video codecs
+## 4. Unregistered video codecs
 
 This tweak was implemented in modifications to 2.1.0, but not documented.
 
@@ -104,7 +104,7 @@ The codec set used by Mango player includes video playback related stuff. The tw
 
 **Note:** iBasso has incorporated this modification into stock firmware starting from version 2.2.0.
 
-##5. Image size reduced
+## 5. Image size reduced
 
 Stock firmware 2.1.5 image contains two redundant copies of the OS kernel. I believe they just take the space and increase the image size, and that's why I believe it is safe to remove them.
 
@@ -112,19 +112,19 @@ Stock firmware 2.1.8 image contains two redundant copies of the OS kernel as wel
 
 **Note:** iBasso has incorporated this modification into stock firmware starting from version 2.2.0. Also, they have removed a lot of other files that are not used, so that 2.2.0 has the smallest image file size!
 
-##6. Gapless buffer
+## 6. Gapless buffer
 
 The default buffer for gapless playback is 100 ms, meaning, the sound can be interrupted, if 100 ms is not enough to prepare the next file for playback. Increasing the buffer to 200 ms decreases the chance of such interrupts.
 
 **Note:** iBasso has incorporated this modification into stock firmware starting from version 2.1.8, increasing the buffer to 1000 ms.
 
-##7. ADB runs in _USB Charge Only_ mode
+## 7. ADB runs in _USB Charge Only_ mode
 
 ADB is Android Debug Bridge. Though it is intended for debugging Android applications, some power users find it useful as well. It does not harm, nor it affects the sound. The only side effect for regular users is a "new device found" message on connecting DX90 to Windows in _Charge Only_ mode. You may ignore it, and ignore unrecognized device, or install "Android ADB Interface" drivers.
 
 I never saw complains from Rockbox for DX90 (which has ADB turned on) users, and ADB is useful for myself to check the results of modifications, so I decided to keep it in the public release.
 
-##8. Custom built exFAT and NTFS drivers
+## 8. Custom built exFAT and NTFS drivers
 Recently I've finished [my port of exFAT and NTFS drivers for Android](https://github.com/Lurker00/Android-fs) and decided to use them in DX90 firmware. They are built from the latest original source code (DX90 uses old versions), and I've made some changes to exFAT driver which I found useful for DX90:
 * Original exFAT driver relies on proper unmount of the file system, which often can't be achieved for a battery powered device. With an accidental power loss, or hot SD card unplug, the original driver may leave the file system in a damaged state.
 * Original exFAT driver make unneeded writes to the SD card: every boot and unmount (marks the volume as "opened" and "closed"), and on every file access (by modifying last access time).
@@ -135,7 +135,7 @@ Avoiding unneeded writes may also reduce the famous "fade in/fade out" problem, 
 
 **Note:** I've found that in 2.4.0 iBasso started to use kernel mode exFAT drivers. I've removed mine from 2.4.0L1 and L2.
 
-##9. Ultimate cleanup
+## 9. Ultimate cleanup
 
 This finalizes the process started by "unused services disabled ([2])", and is based on the [work done for DX80](https://github.com/Lurker00/DX80-firmware/blob/master/release/README.md). I mean it, because now `MangoPlayer` is the only running process, apart from the `kernel`, `init`, which are required, obviously, and `vold`, that serves media mounts!
 
@@ -145,7 +145,7 @@ The MangoPlayer sound library uses a proprietary implementation of [OpenMAX](htt
 
 System logging is turned off. In particular, it is achived by a [`liblog.so` stub that does nothing](https://github.com/Lurker00/DX80-firmware/blob/master/src/jni).
 
-##10. MangoPlayer from DX50
+## 10. MangoPlayer from DX50
 
 DX50 and DX90 have common player source code, but iBasso usually release DX50 firmware after DX90, which may lead to some differences.
 
